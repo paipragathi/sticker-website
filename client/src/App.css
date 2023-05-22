@@ -1,0 +1,11 @@
+
+.wrapper {
+    background-color: black;
+background-repeat: no-repeat;
+background-position: center;
+background-size: 200vw;
+
+background-attachment: fixed; 
+padding-bottom: 40px ;
+padding-right: 0;
+}

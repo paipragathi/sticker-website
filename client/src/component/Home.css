@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Space+Mono');
+
+
+
+
+.wrapper {
+  display: flex;
+  height: 99vh;
+  align-items: center;
+ 
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+
+
+.card {
+  margin: 3vw;
+  width: 25vw;
+  flex-shrink: 0;
+  padding: 2vw;
+  height: 200vw;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 0 4px darkred;
+}
+
+.card-title {
+  transition: .3s;
+  text-align: center;
+  font-family: 'Space Mono', monospace;
+  margin: 2vw;
+  font-size: 2vw;
+  opacity: 0;
+  transform: scale(.7);
+}
+
+/* .card:last-child:after {
+
+  width: 6vw;
+  height: 3vw;
+  right: -6vw;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 90%;
+  
+} */
+
+.card img {
+  height: 270px;
+  opacity: 0;
+  margin: auto;
+  display: block;
+  transition: .35s;
+  transform: rotate(6deg) translate(0, 50px) scaleY(.6);
+  object-fit: cover;
+}
+
+.card.isVisible img {
+  max-width: 20vw;
+  opacity: 1;
+  transform: none;
+}
+
+.card.isVisible .card-title {
+  opacity: 1;
+  transform: none;
+  transition-delay: .1s;
+}
+
+.card:first-child {
+  margin-left: 6vw;
+  max-height: 30vw;
+}
+.card:nth-child(4), .card:nth-child(6) {
+  max-height: 30vw;
+}
